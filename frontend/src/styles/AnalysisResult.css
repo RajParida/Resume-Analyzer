@@ -1,0 +1,165 @@
+.analysis-result {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.analysis-result h2 {
+  color: #333;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.analysis-result h3 {
+  color: #667eea;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.score-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.score-value {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.summary-section {
+  background-color: #f8f9ff;
+  padding: 20px;
+  border-left: 4px solid #667eea;
+  border-radius: 8px;
+}
+
+.summary-section p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.analysis-section {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.analysis-section p {
+  line-height: 1.8;
+  color: #666;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.strengths-weaknesses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.strengths,
+.improvements {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.strengths {
+  background-color: #e8f5e9;
+  border-left: 4px solid #28a745;
+}
+
+.improvements {
+  background-color: #fff3e0;
+  border-left: 4px solid #ffc107;
+}
+
+.strengths h3 {
+  color: #28a745;
+}
+
+.improvements h3 {
+  color: #ff9800;
+}
+
+.strengths ul,
+.improvements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.strengths li,
+.improvements li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.strengths li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.improvements li:before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #ff9800;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .strengths-weaknesses {
+    grid-template-columns: 1fr;
+  }
+
+  .score-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .score-value {
+    font-size: 2rem;
+  }
+
+  .analysis-result h2 {
+    font-size: 1.5rem;
+  }
+}
