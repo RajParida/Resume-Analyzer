@@ -2,7 +2,7 @@
 
 A full-stack web application that uses Google's Gemini API to intelligently analyze and evaluate resumes. Get comprehensive feedback on your resume including a professional score, key strengths, and actionable improvement suggestions.
 
-## 🌟 Features
+## Features
 
 - **AI-Powered Analysis**: Uses Google Gemini API for intelligent resume analysis
 - **Comprehensive Scoring**: Get a professional score from 1-100
@@ -12,7 +12,7 @@ A full-stack web application that uses Google's Gemini API to intelligently anal
 - **Real-time Feedback**: Instant analysis with detailed insights
 - **CORS Enabled**: Easy frontend-backend communication
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 18**: UI library
@@ -26,13 +26,13 @@ A full-stack web application that uses Google's Gemini API to intelligently anal
 - **Google Generative AI**: Gemini API integration
 - **Pydantic**: Data validation
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18+ and npm
 - Python 3.9+
 - Google Gemini API key (get it from [Google AI Studio](https://makersuite.google.com/app/apikey))
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Setup Environment Variables
 
@@ -82,45 +82,7 @@ npm run dev
 
 The frontend will be available at `http://localhost:5173`
 
-## 📁 Project Structure
-
-```
-Resume Analyzer/
-├── backend/
-│   ├── app/
-│   │   ├── __init__.py
-│   │   ├── main.py           # FastAPI application
-│   │   ├── models.py         # Pydantic models
-│   │   └── services/
-│   │       └── gemini_service.py  # Gemini API integration
-│   ├── requirements.txt
-│   ├── pyproject.toml
-│   ├── .env.example
-│   └── .gitignore
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ResumeAnalyzer.jsx
-│   │   │   └── AnalysisResult.jsx
-│   │   ├── styles/
-│   │   │   ├── ResumeAnalyzer.css
-│   │   │   └── AnalysisResult.css
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   ├── main.jsx
-│   │   └── index.css
-│   ├── index.html
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── .gitignore
-│   └── README.md
-├── .github/
-│   └── copilot-instructions.md
-├── .gitignore
-└── README.md
-```
-
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Analyze Resume
 - **Endpoint**: `POST /api/analyze`
@@ -171,13 +133,6 @@ Resume Analyzer/
    - Check improvement suggestions
 4. **Iterate**: Make improvements and re-analyze
 
-## 🔒 Security Notes
-
-- The `.env` file is in `.gitignore` to prevent exposing your API key
-- Never commit your `.env` file to version control
-- Use environment variables for sensitive information
-- CORS is configured to accept requests from localhost during development
-
 ## 📦 Building for Production
 
 ### Build Frontend
@@ -195,23 +150,6 @@ pip install -r requirements.txt
 python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
-## 🐛 Troubleshooting
-
-### Backend Connection Error
-- Ensure the backend server is running (`python -m uvicorn app.main:app --reload`)
-- Check if port 8000 is available
-- Verify CORS is enabled in the backend
-
-### Gemini API Error
-- Verify your API key is correct in `.env`
-- Check that you have API quota available
-- Ensure the Google Generative AI library is installed: `pip install google-generativeai`
-
-### Frontend Not Loading
-- Ensure Node.js is installed: `node --version`
-- Clear npm cache: `npm cache clean --force`
-- Delete `node_modules` and reinstall: `rm -rf node_modules && npm install`
-
 ## 📚 Documentation
 
 - [Gemini API Documentation](https://ai.google.dev/)
@@ -219,15 +157,8 @@ python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
 - [React Documentation](https://react.dev/)
 - [Vite Documentation](https://vitejs.dev/)
 
-## 📝 License
 
-This project is open source and available under the MIT License.
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork the project and submit pull requests.
-
-## ✨ Future Enhancements
+## Future Enhancements
 
 - File upload support (PDF, DOCX)
 - Resume template suggestions

@@ -1,6 +1,6 @@
-# 🎉 Resume Analyzer Project Setup Complete!
+# Resume Analyzer Project Setup
 
-## ✅ What's Been Created
+## What's Been Created
 
 ### Backend (FastAPI + Gemini API)
 - **app/main.py** - FastAPI server with CORS enabled
